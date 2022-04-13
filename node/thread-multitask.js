@@ -27,9 +27,9 @@ function readFile() {
   })
 }
 
-readFile()
-doHash()
-doHash()
-doHash()
-doHash()
 doRequest()
+doHash()
+doHash()
+doHash()
+doHash()
+readFile()
