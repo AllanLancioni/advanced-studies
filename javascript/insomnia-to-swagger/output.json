@@ -1,0 +1,1203 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Sample API",
+        "description": "Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.",
+        "version": "0.1.9"
+    },
+    "servers": [
+        {
+            "url": "https://mtt-dev.herokuapp.com/",
+            "description": "Server"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "paths": {
+        "/tarifa_list": {
+            "get": {
+                "summary": "Get Tarifa List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Tarifa List (not working)"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Insert Tarifa List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Tarifa List (not working)"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update Tarifa List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Tarifa List (not working)"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/loyalty": {
+            "get": {
+                "summary": "Loyalty",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Loyalty (not working)"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "first_name",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "last_name",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "hash",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/process_payment": {
+            "post": {
+                "summary": "process_payment",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "input"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "msg": "string",
+                                    "status": "string"
+                                }
+                            },
+                            "example": {
+                                "msg": "",
+                                "status": ""
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/process_recover": {
+            "post": {
+                "summary": "Process Recover",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Process"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/process_pending": {
+            "post": {
+                "summary": "Process Pending",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Process"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/process_remove_deny_list": {
+            "post": {
+                "summary": "Process Remove Deny List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Process"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "pan_hash",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/cancel_transaction": {
+            "post": {
+                "summary": "Cancel Transaction",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Process"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "pan_hash",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/sam_card_propr": {
+            "get": {
+                "summary": "Sam Card Propr",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Sam List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/get_sam_list": {
+            "get": {
+                "summary": "Get Sam List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Sam List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/update_sam": {
+            "post": {
+                "summary": "Update Sam",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Sam List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": "integer",
+                                    "ativo": "integer",
+                                    "sam_uid": "string",
+                                    "sam_atc": "integer",
+                                    "sam_location_id": "integer",
+                                    "last_update": "string",
+                                    "direction": "integer",
+                                    "valid_id": "string",
+                                    "pk_change": "integer",
+                                    "dl_change": "integer",
+                                    "wl_change": "integer",
+                                    "last_trans_token": "string",
+                                    "tc_change": "integer",
+                                    "emv_enable": "integer",
+                                    "vel_taps_1": "integer",
+                                    "vel_time_1": "integer",
+                                    "vel_taps_2": "integer",
+                                    "vel_time_2": "integer",
+                                    "n_taps_offline": "integer",
+                                    "tmax_oper_offline": "integer",
+                                    "mtt_url": "string",
+                                    "super_avr_timeout": "integer",
+                                    "super_tap_timeout": "integer",
+                                    "dis_list_ini": "string",
+                                    "dis_list_end": "string",
+                                    "check_list_time": "integer",
+                                    "check_list_random": "integer",
+                                    "rota_id": "object"
+                                }
+                            },
+                            "example": {
+                                "id": 4406,
+                                "ativo": 1,
+                                "sam_uid": "000000004f",
+                                "sam_atc": 0,
+                                "sam_location_id": 101,
+                                "last_update": "2022-04-01T18:46:51.707",
+                                "direction": 50,
+                                "valid_id": "999",
+                                "pk_change": 1,
+                                "dl_change": 1,
+                                "wl_change": 1,
+                                "last_trans_token": "010000000000004fd995602c891471ad",
+                                "tc_change": 1,
+                                "emv_enable": 238,
+                                "vel_taps_1": 5,
+                                "vel_time_1": 60,
+                                "vel_taps_2": 10,
+                                "vel_time_2": 180,
+                                "n_taps_offline": 1000,
+                                "tmax_oper_offline": 1800,
+                                "mtt_url": "na",
+                                "super_avr_timeout": 0,
+                                "super_tap_timeout": 0,
+                                "dis_list_ini": "23:00",
+                                "dis_list_end": "23:30",
+                                "check_list_time": 600,
+                                "check_list_random": 300,
+                                "rota_id": null
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/update_all_sam": {
+            "post": {
+                "summary": "Update All Sam",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Sam List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "ativo": "integer",
+                                    "sam_atc": "integer",
+                                    "sam_location_id": "integer",
+                                    "last_update": "string",
+                                    "direction": "integer",
+                                    "valid_id": "string",
+                                    "pk_change": "integer",
+                                    "dl_change": "integer",
+                                    "wl_change": "integer",
+                                    "last_trans_token": "string",
+                                    "tc_change": "integer",
+                                    "emv_enable": "integer",
+                                    "vel_taps_1": "integer",
+                                    "vel_time_1": "integer",
+                                    "vel_taps_2": "integer",
+                                    "vel_time_2": "integer",
+                                    "n_taps_offline": "integer",
+                                    "tmax_oper_offline": "integer",
+                                    "mtt_url": "string",
+                                    "super_avr_timeout": "integer",
+                                    "super_tap_timeout": "integer",
+                                    "dis_list_ini": "string",
+                                    "dis_list_end": "string",
+                                    "check_list_time": "integer",
+                                    "check_list_random": "integer",
+                                    "rota_id": "object"
+                                }
+                            },
+                            "example": {
+                                "ativo": 1,
+                                "sam_atc": 0,
+                                "sam_location_id": 101,
+                                "last_update": "2022-04-01T18:46:51.707",
+                                "direction": 10,
+                                "valid_id": "999",
+                                "pk_change": 1,
+                                "dl_change": 1,
+                                "wl_change": 1,
+                                "last_trans_token": "010000000000004fd995602c891471ad",
+                                "tc_change": 1,
+                                "emv_enable": 238,
+                                "vel_taps_1": 5,
+                                "vel_time_1": 60,
+                                "vel_taps_2": 10,
+                                "vel_time_2": 180,
+                                "n_taps_offline": 1000,
+                                "tmax_oper_offline": 1800,
+                                "mtt_url": "na",
+                                "super_avr_timeout": 0,
+                                "super_tap_timeout": 0,
+                                "dis_list_ini": "23:00",
+                                "dis_list_end": "23:30",
+                                "check_list_time": 600,
+                                "check_list_random": 300,
+                                "rota_id": null
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/get_events": {
+            "get": {
+                "summary": "Get Events",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Events (Logs)"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "dataInicial",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "dataFinal",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/get_all_events": {
+            "get": {
+                "summary": "Get All Events",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Events (Logs)"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "dataInicial",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "dataFinal",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/get_paid_log": {
+            "get": {
+                "summary": "Get Paid Logs",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Events (Logs)"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "data",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/ext_pay": {
+            "post": {
+                "summary": "Ext Pay",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Events (Logs)"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "data",
+                        "type": "string"
+                    },
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/add_white_list": {
+            "post": {
+                "summary": "Add White List",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "White List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "pan_hash": "string",
+                                    "par": "string",
+                                    "last_4": "string",
+                                    "bin": "string",
+                                    "bandeira": "integer",
+                                    "pack_data": "string",
+                                    "token_sx": "string",
+                                    "status_card": "integer",
+                                    "categoria": "integer",
+                                    "expire": "string",
+                                    "last_update": "string",
+                                    "resubmission_id": "string",
+                                    "deve": "integer",
+                                    "credito": "integer",
+                                    "midia": "string",
+                                    "n_tap_dia": "integer",
+                                    "discovery": "string",
+                                    "app": "integer",
+                                    "aid_struct": "string",
+                                    "sts_update": "string",
+                                    "ref_rec": "object"
+                                }
+                            },
+                            "example": {
+                                "pan_hash": "5a2a3e21160e38491edc04de052a2222",
+                                "par": "V001001eb79f33d8076526196e866",
+                                "last_4": "5740",
+                                "bin": "443165",
+                                "bandeira": 1,
+                                "pack_data": "",
+                                "token_sx": "ad12fb395741dc2e3321a213eb217064fc31bcb5d32a131e32131ff2312f51ca21321bcb5fb395741dc2e332",
+                                "status_card": 2,
+                                "categoria": 1,
+                                "expire": "0121",
+                                "last_update": "2022-04-01T23:07:02.740Z",
+                                "resubmission_id": "",
+                                "deve": 0,
+                                "credito": 0,
+                                "midia": "CARTAO",
+                                "n_tap_dia": 0,
+                                "discovery": "11111111111111111111111111111111",
+                                "app": 0,
+                                "aid_struct": "[{\"aid\":\"a0000000032010\",\"sts\":2,\"deve\":0},{\"aid\":\"0\",\"sts\":0,\"deve\":0},{\"aid\":\"0\",\"sts\":0,\"deve\":0},{\"aid\":\"0\",\"sts\":0,\"deve\":0}]",
+                                "sts_update": "2022-04-01T18:46:36.440Z",
+                                "ref_rec": null
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "summary": "System Status",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "System"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/get_system_cfg": {
+            "get": {
+                "summary": "Get System Config",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "System"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/system_events": {
+            "get": {
+                "summary": "System Events",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "System"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/update_system": {
+            "post": {
+                "summary": "Update System ",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "System"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "config_sys": "integer",
+                                    "tarifa": "integer",
+                                    "mtt_processo": "string",
+                                    "max_value": "integer",
+                                    "emv_enable": "integer",
+                                    "vel_taps_1": "integer",
+                                    "vel_time_1": "integer",
+                                    "vel_taps_2": "integer",
+                                    "vel_time_2": "integer",
+                                    "last_update": "string",
+                                    "tmax_oper_offline": "integer",
+                                    "n_taps_offline": "integer",
+                                    "mtt_url": "string",
+                                    "super_avr_timeout": "integer",
+                                    "super_tap_timeout": "integer",
+                                    "dis_list_ini": "string",
+                                    "dis_list_end": "string",
+                                    "check_list_time": "integer",
+                                    "check_list_random": "integer"
+                                }
+                            },
+                            "example": {
+                                "config_sys": 1,
+                                "tarifa": 10,
+                                "mtt_processo": "23:00",
+                                "max_value": 100000,
+                                "emv_enable": 238,
+                                "vel_taps_1": 5,
+                                "vel_time_1": 60,
+                                "vel_taps_2": 10,
+                                "vel_time_2": 180,
+                                "last_update": "2020-04-02T14:21:17.353",
+                                "tmax_oper_offline": 1800,
+                                "n_taps_offline": 1000,
+                                "mtt_url": "na",
+                                "super_avr_timeout": 0,
+                                "super_tap_timeout": 0,
+                                "dis_list_ini": "23:00",
+                                "dis_list_end": "23:30",
+                                "check_list_time": 600,
+                                "check_list_random": 300
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/card_priority_list": {
+            "get": {
+                "summary": "Get Priority Lists",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Card Priority List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update Priority Lists",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Card Priority List"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "0": "object"
+                                }
+                            },
+                            "example": [
+                                {
+                                    "aid": "a0000000031010",
+                                    "code": 1,
+                                    "brand": "VISA",
+                                    "brand_type": "CREDITO",
+                                    "brand_code": 1,
+                                    "acquire": "cielo",
+                                    "priority": 1,
+                                    "tac_online": "DC4004F800",
+                                    "tac_default": "DC4000A800",
+                                    "tac_denied": "0010000000",
+                                    "last_update": "2021-12-16T12:00:00.000Z"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/rule/all": {
+            "get": {
+                "summary": "Get All Rules",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Rule"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/rule": {
+            "post": {
+                "summary": "Insert Rule",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Rule"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "rule_name": "string",
+                                    "active": "integer",
+                                    "rule": "string"
+                                }
+                            },
+                            "example": {
+                                "rule_name": "integracao Teste",
+                                "active": 1,
+                                "rule": "{\"ponto1\":\"teste\",\"ponto2\":\"mns\",\"janela\":150,\"logica\":\"GxG\",\"fator_desconto\":0.5}"
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Edit Rule",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "Rule"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": "integer",
+                                    "rule_name": "string",
+                                    "active": "integer",
+                                    "rule": "string"
+                                }
+                            },
+                            "example": {
+                                "id": 1002,
+                                "rule_name": "integracao Teste",
+                                "active": 1,
+                                "rule": "{\"ponto1\":\"metro teste\",\"ponto2\":\"mns\",\"janela\":150,\"logica\":\"GxG\",\"fator_desconto\":0.5}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/": {
+            "get": {
+                "summary": "index",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/logo": {
+            "get": {
+                "summary": "logo",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ],
+                "parameters": []
+            }
+        },
+        "/list_localy_group": {
+            "get": {
+                "summary": "List Localy Group",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "api"
+                ],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "api_key",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/VrdyServiceF": {
+            "get": {
+                "summary": "VrdyService[TF]",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "examples": {
+                            "application/json": ""
+                        }
+                    }
+                },
+                "tags": [
+                    "input"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "step",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "tag",
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    }
+}
